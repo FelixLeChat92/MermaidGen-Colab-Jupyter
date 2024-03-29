@@ -1,3 +1,50 @@
+# Mermaid Diagram Generation Script
+
+This Python script, optimized for Google Colab and Jupyter Notebook, allows you to generate Mermaid diagrams from Mermaid code defined in the `mermaid_code` variable. It offers several features to visualize and save the generated diagrams.
+
+## Main Features
+
+- Generation of a link to the Mermaid Live online editor to visualize and modify the diagram
+- Generation of a high-quality SVG image of the diagram using kroki.io
+- Generation of a high-quality SVG image of the diagram using mermaid.ink
+- Generation of a low-quality PNG image of the diagram using mermaid.ink
+- Saving the generated images in the current directory
+
+## Usage
+
+1. Define your Mermaid code in the `mermaid_code` variable
+2. Run the code cells in the following order:
+   - Import the necessary libraries
+   - Define the Mermaid code
+   - Generate the Mermaid Live link (independent execution)
+   - Generate the SVG image from kroki.io (independent execution)
+   - Generate the SVG image from mermaid.ink (independent execution)
+   - Generate the PNG image from mermaid.ink (independent execution)
+3. The links to the different representations of the diagram will be displayed in the output, along with the generated images
+4. The generated images will be saved in the current directory with filenames based on a part of the URL
+
+## Dependencies
+
+- Python 3
+- Python libraries: base64, sys, json, zlib, IPython.display, requests
+
+## Feedback
+
+During my research to integrate Mermaid diagrams into Jupyter and Google Colab notebooks, I encountered several difficulties:
+
+- The mermaid-filter and mermaid-cli APIs did not work natively in these environments. There were version conflicts with the IPython and ipykernel dependencies.
+
+- Solutions based on nb-mermaid required older versions of IPython that were incompatible with recent kernels. Moreover, the generated images were of poor quality in PNG format.
+
+- Using rich to display Mermaid diagrams in Google Colab only worked for simple Markdown files, but not with Mermaid rendering.
+
+Finally, I took inspiration from old solutions for Jupyter using the online mermaid.ink API. I adapted and improved them to have a robust and efficient code to easily generate and obtain the necessary images and files.
+
+This script brings together these different approaches to offer a functional solution, while waiting for better native integration of Mermaid in Jupyter and Colab notebooks. Feel free to adapt it according to your needs!
+
+---
+Fr : 
+
 # Script de génération de diagrammes Mermaid
 
 Ce script Python optimisé pour Google Colab et Jupyter Notebook permet de générer des diagrammes Mermaid à partir d'un code Mermaid défini dans la variable `mermaid_code`. Il offre plusieurs fonctionnalités pour visualiser et enregistrer les diagrammes générés.
