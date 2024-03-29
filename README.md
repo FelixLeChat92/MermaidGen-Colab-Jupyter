@@ -1,3 +1,4 @@
+#EN
 # Mermaid Diagram Generation Script
 
 This Python script, optimized for Google Colab and Jupyter Notebook, allows you to generate Mermaid diagrams from Mermaid code defined in the `mermaid_code` variable. It offers several features to visualize and save the generated diagrams.
@@ -43,7 +44,7 @@ Finally, I took inspiration from old solutions for Jupyter using the online merm
 This script brings together these different approaches to offer a functional solution, while waiting for better native integration of Mermaid in Jupyter and Colab notebooks. Feel free to adapt it according to your needs!
 
 ---
-Fr : 
+#FR
 
 # Script de génération de diagrammes Mermaid
 
